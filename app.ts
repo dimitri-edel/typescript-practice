@@ -14,6 +14,20 @@ enum Role {
     Guest = "Guest" // Enum for user roles
 }
 
+// An example of a dictionary of mixed types
+interface MixedDictionary {
+    [key: string]: string | number | boolean; // Key can be a string, value can be string, number, or boolean
+}
+
+// Example of a function with optional parameters. Paramter age is optional.
+function createUser(name: string, age?: number): User {
+    return {
+        name: name,
+        age: age || 0, // Default age to 0 if not provided
+        isActive: true // Default value for isActive
+    };
+}
+
 
 
 
