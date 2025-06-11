@@ -1,4 +1,9 @@
 // app.ts
+import { I18nParams } from "./i18n";
+// Importing the I18nParams interface from i18n.ts
+// Importing the i18n function from i18n.ts
+import { i18n } from "./i18n";
+
 
 // Example of an interface
 interface User {
@@ -28,6 +33,16 @@ function createUser(name: string, age?: number): User {
     };
 }
 
+// i18n usage example
+const locale = "en";
+const userParams: I18nParams = {
+    name: "Alice",
+    age: 30
+};
+const greeting_en= i18n(locale, "greeting", userParams);
+console.log(greeting_en); // Output: Hello, Alice!
+const greeting_es = i18n("es", "greeting", userParams);
+console.log(greeting_es); // Output: ¡Hola, Alice!
 
 
 
